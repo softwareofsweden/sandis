@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/sandis-monitor/test" method="GET">
+        <service class="Sandis\Monitor\Api\MonitorInterface" method="test"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/sandis-monitor/jobs" method="GET">
+        <service class="Sandis\Monitor\Api\MonitorInterface" method="jobs"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/sandis-monitor/jobs/:filename" method="DELETE">
+        <service class="Sandis\Monitor\Api\MonitorInterface" method="deleteJob"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/sandis-monitor/crons/running" method="GET">
+        <service class="Sandis\Monitor\Api\MonitorInterface" method="cronsRunning"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/sandis-monitor/crons/last" method="GET">
+        <service class="Sandis\Monitor\Api\MonitorInterface" method="cronsLast"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
