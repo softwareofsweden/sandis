@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sandis_Gallery::image_gallery" title="Image Galleries" translate="title" module="Sandis_Gallery" sortOrder="200" parent="Magento_Backend::content_elements" action="gallery/gallery" resource="Sandis_Gallery::gallery"/>
+    </menu>
+</config>
