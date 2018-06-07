@@ -1,0 +1,12 @@
+<?php
+  /* @var $block \Sandis\Gallery\Block\Widget\Gallery */
+  $imagesCount = count($block->getImages());
+?>
+
+<div id="gallery">
+    <?php foreach ($block->getImages() as $filename => $image): ?>
+        <img alt="<?php echo $block->escapeHtml($filename) ?>" src="<?php echo $image['thumbnail'] ?>"
+             data-image="<?php echo $image['image'] ?>"
+             data-description="<?php echo $block->escapeHtml($filename) ?>">
+    <?php endforeach; ?>
+</div>

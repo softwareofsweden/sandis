@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="image_gallery" class="Sandis\Gallery\Block\Widget\Gallery" is_email_compatible="false"
+            placeholder_image="Magento_Cms::images/widget_page_link.png">
+        <label translate="true">Image Gallery</label>
+        <description translate="true">Displays images from image gallery.</description>
+        <parameters>
+            <parameter name="gallery_id" xsi:type="block" visible="true" required="true" sort_order="10">
+                <label translate="true">Image Gallery</label>
+                <block class="Sandis\Gallery\Block\Adminhtml\Gallery\Widget\Chooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string" translate="true">Select Gallery...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="template" xsi:type="select" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="widget/gallery/basic.phtml" selected="true">
+                        <label translate="true">Basic Image Gallery Template</label>
+                    </option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
